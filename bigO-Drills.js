@@ -39,3 +39,27 @@ function doubleArrayValues(array) {
 This function has a Big-O of O(n) because the function is directly dependent on the size of the array that
 is passed to it.
 */
+
+function naiveSearch(array, item) {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === item) {
+      return i;
+    }
+  }
+}
+
+/*
+In the best case the first item in the array is equal to i meaning, this function has a Big-O of O(1)
+In any other case, the function has a Big-O of O(n) becuase it has to iterate over the array.
+*/
+
+function createPairs(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i + 1; j < arr.length; j++) {
+      console.log(arr[i] + ', ' + arr[j]);
+    }
+  }
+}
+
+/* This function has a Big-O of O(n^2) because it has to loop over the provided array twice every time
+the function is called */
