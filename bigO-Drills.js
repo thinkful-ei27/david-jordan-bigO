@@ -95,3 +95,31 @@ function generateFib(num) {
 If num is 0, or 1 the function Big-O of O(1)
 In any other case, This function has a Big-O of O(n)
 */
+
+
+function efficientSearch(array, item) {
+  let minIndex = 0;
+  let maxIndex = array.length - 1;
+  let currentIndex;
+  let currentElement;
+
+  while (minIndex <= maxIndex) {
+    currentIndex = Math.floor((minIndex + maxIndex) / 2);
+    currentElement = array[currentIndex];
+
+    if (currentElement < item) {
+      minIndex = currentIndex + 1;
+    }
+    else if (currentElement > item) {
+      maxIndex = currentIndex - 1;
+    }
+    else {
+      return currentIndex;
+    }
+  }
+  return -1;
+}
+
+/* This binary search function has a Big-O of O(log(n)). You have to increase the size of the array by an
+order of magnitude of 10 to see a significant change in runtime.
+*/
