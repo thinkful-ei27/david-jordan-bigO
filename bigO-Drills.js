@@ -12,8 +12,6 @@ function isEven(value) {
 This funciont has a Big-O of O(1) becuase it only takes one input and evaluates the value
 of that input once, no matter what the input is, the function will only run one time.
 */
-
-Are you here ?
   function areYouHere(arr1, arr2) {
     for (let i = 0; i < arr1.length; i++) {
       const el1 = arr1[i];
@@ -24,3 +22,8 @@ Are you here ?
     }
     return false;
   }
+
+  /*
+  This function has a Big-O of O(n^2) because it takes in two arrays as input.
+  As the arrays get larger, there are exponentially more iterations due to the loops conditional is set to the array length's
+  */
