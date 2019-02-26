@@ -157,44 +157,53 @@ prime numbers.
 
 
 //---------------------------------------------Recursion Drills from yesterday-------------------------------------------//
-// let countSheep = function(sheep) {
-//   if (sheep === 0) {
-//     return;
-//   }
+let countSheep = function (sheep) {
+  if (sheep === 0) {
+    return;
+  }
 
-//   console.log(` ${sheep} - Another sheep jumped over the fence`);
+  console.log(` ${sheep} - Another sheep jumped over the fence`);
 
-//   countSheep(sheep - 1);
-// };
-// countSheep(5);
+  countSheep(sheep - 1);
+};
+countSheep(5);
 
 
 /*
 This function has a Big-O notation of O(n) because as sheep gets larger, the function runs longer in a linear fasion
 */
 ///////////////////////////////////////////////////////////////////////
-// const arrDouble = arr => {
-//   if (!arr.length) {
-//     return [];
-//   }
+const arrDouble = arr => {
+  if (!arr.length) {
+    return [];
+  }
 
-//   return [arr[0] * 2, ...arrDouble(arr.slice(1))];
-// };
-// console.log(arrDouble([1, 2, 3]));
-// const reverseString = function (string) {
+  return [arr[0] * 2, ...arrDouble(arr.slice(1))];
+};
+console.log(arrDouble([1, 2, 3]));
 
-//   if (string == "") {
-//     return ""
-//   }
+/*
+his function has a Big-O notation of O(n) because it will run one time for each item in the array.
+So the larger the array the runtime will grow in a linear fashion.
+*/
 
-//   let firstChar = string[0]
-//   return reverseString(string.slice(1)) + firstChar
+const reverseString = function (string) {
 
-// }
+  if (string == "") {
+    return ""
+  }
 
-// console.log(reverseString("abcdefg"));
+  let firstChar = string[0]
+  return reverseString(string.slice(1)) + firstChar
+
+}
+
+console.log(reverseString("abcdefg"));
 
 
+/*
+
+*/
 
 
 
@@ -203,46 +212,97 @@ This function has a Big-O notation of O(n) because as sheep gets larger, the fun
 // *   *   *
 // *   *    *    
 
-// const triangularNumber = num => {
-//   if (num === 1) return 1;
+const triangularNumber = num => {
+  if (num === 1) return 1;
 
-//   return num + triangularNumber(num - 1);
-// };
+  return num + triangularNumber(num - 1);
+};
 
-// console.log(triangularNumber(4));
+console.log(triangularNumber(4));
 
-// const stringSplit = function (string, separator) {
+/*
 
-//   const index = string.indexOf(separator)
+*/
 
-//   if (index < 0) {
-//     return [string]
-//   } else {
-//     return [string.slice(0, index), ...stringSplit(string.slice(index + 1), separator)]
-//   }
 
-// }
+const stringSplit = function (string, separator) {
 
-// console.log(stringSplit("Hiigiigi", "g"))
+  const index = string.indexOf(separator)
 
-//factorial(5) -> 5 * 4 * 3 * 2 * 1
+  if (index < 0) {
+    return [string]
+  } else {
+    return [string.slice(0, index), ...stringSplit(string.slice(index + 1), separator)]
+  }
 
-// const factorial = num => {
-//   if (num === 1) return 1;
+}
 
-//   return num * factorial(num - 1);
-// };
+console.log(stringSplit("Hiigiigi", "g"))
 
-// console.log(factorial(5));
+/*
 
-// const fibonacci = function(fibIndex) {
+*/
 
-//   if (fibIndex < 3) {
-//     return 1
-//   }
-//   return fibonacci(fibIndex - 1) + fibonacci(fibIndex - 2)
 
-// }
+factorial(5) -> 5 * 4 * 3 * 2 * 1
 
-// console.log(fibonacci(13))
+const factorial = num => {
+  if (num === 1) return 1;
 
+  return num * factorial(num - 1);
+};
+
+console.log(factorial(5));
+
+/*
+
+*/
+
+
+const fibonacci = function (fibIndex) {
+
+  if (fibIndex < 3) {
+    return 1
+  }
+  return fibonacci(fibIndex - 1) + fibonacci(fibIndex - 2)
+
+}
+
+console.log(fibonacci(13))
+
+/*
+
+*/
+
+
+function anagrams(str, prefix = '', answers = []) {
+  if (!str) {
+    answers.push(prefix);
+    return;
+  }
+  for (let i = 0; i < str.length; i++) {
+    let newPrefix = prefix + str[i];
+    let newStr = str.slice(0, i) + str.slice(i + 1);
+    anagrams(newStr, newPrefix, answers);
+  }
+}
+
+const myAnswers = [];
+anagrams('east', '', myAnswers);
+console.log(myAnswers.length);
+
+/*
+
+*/
+
+function traverse(animalHierarchy, parent) {
+  let node = {};
+  animalHierarchy.filter(item => item.parent === parent)
+    .forEach(item => node[item.id] = traverse(animalHierarchy, item.id));
+  return node;
+}
+console.log(traverse(animalHierarchy, null));
+
+/*
+
+*/
