@@ -257,7 +257,7 @@ const factorial = num => {
 console.log(factorial(5));
 
 /*
-
+O(n), function must run once for value of n. n===4 will run 4 times. n===5 will run 5 times etc.
 */
 
 
