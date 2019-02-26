@@ -270,10 +270,8 @@ const fibonacci = function (fibIndex) {
 
 }
 
-console.log(fibonacci(13))
-
 /*
-
+I believe it's O(n), because each time we increase the fibIndex, the return is called only one extra time.
 */
 
 
