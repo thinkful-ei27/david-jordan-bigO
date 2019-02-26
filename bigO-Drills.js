@@ -240,14 +240,13 @@ const stringSplit = function (string, separator) {
 
 }
 
-console.log(stringSplit("Hiigiigi", "g"))
+console.log(stringSplit("Hiiigii", "g"))
 
 /*
-
+O(n), for every time the string contains the seperator, the function runs one extra time
 */
 
 
-factorial(5) -> 5 * 4 * 3 * 2 * 1
 
 const factorial = num => {
   if (num === 1) return 1;
