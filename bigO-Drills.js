@@ -123,3 +123,11 @@ function efficientSearch(array, item) {
 /* This binary search function has a Big-O of O(log(n)). You have to increase the size of the array by an
 order of magnitude of 10 to see a significant change in runtime.
 */
+
+function findRandomElement(arr) {
+  return arr[Math.floor(Math.random() * arr.length)];
+}
+
+/*
+This function is O(1), because it will return the first random array index value
+*/
