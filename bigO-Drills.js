@@ -183,7 +183,7 @@ const arrDouble = arr => {
 console.log(arrDouble([1, 2, 3]));
 
 /*
-his function has a Big-O notation of O(n) because it will run one time for each item in the array.
+this function has a Big-O notation of O(n) because it will run one time for each item in the array.
 So the larger the array the runtime will grow in a linear fashion.
 */
 
@@ -200,7 +200,10 @@ const reverseString = function (string) {
 
 console.log(reverseString("abcdefg"));
 
-
+/*
+this function has a Big-O notation of O(n) because it will run one time for each character in the string.
+So the larger the string the runtime will grow in a linear fashion.
+*/
 /*
 
 */
