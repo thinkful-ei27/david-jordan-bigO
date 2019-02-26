@@ -146,8 +146,94 @@ function isPrime(n) {
   return true;
 }
 
+
+
+
 /*
 Best case will be O(1) if the number is two or less the function will run once and return false.
 Otherwise it is O(n). in worst case scenarios i will have to increment up to the value of n in order to find
 prime numbers.
 */
+
+
+//---------------------------------------------Recursion Drills from yesterday-------------------------------------------//
+// let countSheep = function(sheep) {
+//   if (sheep === 0) {
+//     return;
+//   }
+
+//   console.log(` ${sheep} - Another sheep jumped over the fence`);
+
+//   countSheep(sheep - 1);
+// };
+// countSheep(5);
+///////////////////////////////////////////////////////////////////////
+// const arrDouble = arr => {
+//   if (!arr.length) {
+//     return [];
+//   }
+
+//   return [arr[0] * 2, ...arrDouble(arr.slice(1))];
+// };
+// console.log(arrDouble([1, 2, 3]));
+// const reverseString = function (string) {
+
+//   if (string == "") {
+//     return ""
+//   }
+
+//   let firstChar = string[0]
+//   return reverseString(string.slice(1)) + firstChar
+
+// }
+
+// console.log(reverseString("abcdefg"));
+
+//     *
+//   *   *
+// *   *   *
+// *   *    *    *
+
+// const triangularNumber = num => {
+//   if (num === 1) return 1;
+
+//   return num + triangularNumber(num - 1);
+// };
+
+// console.log(triangularNumber(4));
+
+// const stringSplit = function (string, separator) {
+
+//   const index = string.indexOf(separator)
+
+//   if (index < 0) {
+//     return [string]
+//   } else {
+//     return [string.slice(0, index), ...stringSplit(string.slice(index + 1), separator)]
+//   }
+
+// }
+
+// console.log(stringSplit("Hiigiigi", "g"))
+
+//factorial(5) -> 5 * 4 * 3 * 2 * 1
+
+// const factorial = num => {
+//   if (num === 1) return 1;
+
+//   return num * factorial(num - 1);
+// };
+
+// console.log(factorial(5));
+
+// const fibonacci = function(fibIndex) {
+
+//   if (fibIndex < 3) {
+//     return 1
+//   }
+//   return fibonacci(fibIndex - 1) + fibonacci(fibIndex - 2)
+
+// }
+
+// console.log(fibonacci(13))
+
