@@ -224,7 +224,7 @@ const triangularNumber = num => {
 console.log(triangularNumber(4));
 
 /*
-
+Also O(n). It's gotta run all the times!
 */
 
 
