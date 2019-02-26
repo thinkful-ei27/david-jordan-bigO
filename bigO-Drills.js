@@ -167,6 +167,11 @@ prime numbers.
 //   countSheep(sheep - 1);
 // };
 // countSheep(5);
+
+
+/*
+This function has a Big-O notation of O(n) because as sheep gets larger, the function runs longer in a linear fasion
+*/
 ///////////////////////////////////////////////////////////////////////
 // const arrDouble = arr => {
 //   if (!arr.length) {
@@ -189,10 +194,14 @@ prime numbers.
 
 // console.log(reverseString("abcdefg"));
 
+
+
+
+
 //     *
 //   *   *
 // *   *   *
-// *   *    *    *
+// *   *    *    
 
 // const triangularNumber = num => {
 //   if (num === 1) return 1;
